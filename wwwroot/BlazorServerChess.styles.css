@@ -1,0 +1,215 @@
+/* _content/BlazorServerChess/Components/Board.razor.rz.scp.css */
+.gridContainer[b-zgb3chf6yk] {
+    display: grid;
+    width: 100%;
+    max-width: 50rem;
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    gap: 2px;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    position: relative;
+}
+
+.checkmate[b-zgb3chf6yk] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 0%, 0.65);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+
+.timeout[b-zgb3chf6yk] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 0%, 0.65);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+.promotion[b-zgb3chf6yk] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 0%, 0.65);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+/* _content/BlazorServerChess/Components/Chat.razor.rz.scp.css */
+.chatContainer[b-slrif5k6cv] {
+    padding: 1rem;
+    background-color: hsl(0, 0%, 41%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(20rem, 23%, 25rem);
+    height: clamp(20rem, 23rem, 25rem);
+    border-radius: 0.2rem;
+    margin: 0.8rem;
+}
+.chatList[b-slrif5k6cv] {
+    padding: 0.3rem;
+    width: 87%;
+    height: 70%;
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 0.2rem;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+ul[b-slrif5k6cv] {
+    list-style: none;
+    text-decoration: none
+}
+li[b-slrif5k6cv] {
+    text-decoration: none;
+}
+.chatInputGroup[b-slrif5k6cv] {
+    width: 87%;
+    display: flex;
+}
+input[b-slrif5k6cv] {
+    width: 75%;
+    padding: 0.8rem;
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+button[b-slrif5k6cv] {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 25%;
+}
+.usernameClass[b-slrif5k6cv] {
+    color: hsl(0, 0%, 63%);
+}
+[b-slrif5k6cv]::-webkit-scrollbar {
+    width: 10px;
+}
+
+[b-slrif5k6cv]::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 7%);
+}
+
+[b-slrif5k6cv]::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 32%);
+}
+
+    [b-slrif5k6cv]::-webkit-scrollbar-thumb:hover {
+        background: hsl(0, 0%, 28%);
+    }
+
+
+@media screen and (max-width:1132px) {
+    .chatContainer[b-slrif5k6cv] {
+        width: 50rem;
+        max-width: 100%;
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}
+/* _content/BlazorServerChess/Components/Chess.razor.rz.scp.css */
+.gameContainer[b-24fsuwkqo1] {
+    width: 100%;
+    max-width: 50rem;
+}
+.nameContainer[b-24fsuwkqo1] {
+    width: 100%;
+}
+/* _content/BlazorServerChess/Components/Square.razor.rz.scp.css */
+.square[b-4lnrzq88p3] {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+.light[b-4lnrzq88p3] {
+    background-color: hsl(0, 0%, 55%);
+}
+.dark[b-4lnrzq88p3] {
+    background-color: hsl(0, 0%, 40%);
+}
+.selected[b-4lnrzq88p3] {
+    background-color: hsl(204, 28%, 52%);
+}
+.available[b-4lnrzq88p3]:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.7;
+    background-image: url(../img/dot.png);
+    background-size: 100% 100%;
+    background-position: center;
+}
+.Check[b-4lnrzq88p3]:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: hsla(0, 100%, 40%, 0.3)
+}
+.Pawn.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhitePawn.png);
+}
+.Pawn.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackPawn.png);
+}
+.Knight.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhiteKnight.png);
+}
+.Knight.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackKnight.png);
+}
+.Bishop.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhiteBishop.png);
+}
+.Bishop.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackBishop.png);
+}
+.Rook.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhiteRook.png);
+}
+.Rook.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackRook.png);
+}
+.Queen.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhiteQueen.png);
+}
+.Queen.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackQueen.png);
+}
+.King.White[b-4lnrzq88p3] {
+    background-image: url(../img/WhiteKing.png);
+}
+.King.Black[b-4lnrzq88p3] {
+    background-image: url(../img/BlackKing.png);
+}
